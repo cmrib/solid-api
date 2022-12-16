@@ -11,7 +11,7 @@ class TurnUserAdminUseCase {
   }
 
   execute({ user_id }: IRequest): User {
-    // Complete aquiconst user = this.usersRepository.findById(user_id);
+    // Complete aqui
     const user = this.usersRepository.findById(user_id);
 
     if (!user) {
