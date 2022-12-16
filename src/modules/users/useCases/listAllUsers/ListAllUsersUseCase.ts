@@ -6,10 +6,17 @@ interface IRequest {
 }
 
 class ListAllUsersUseCase {
-  constructor(private usersRepository: IUsersRepository) {}
+  constructor(private usersRepository: IUsersRepository) {
+    console.log("");
+  }
 
   execute({ user_id }: IRequest): User[] {
     // Complete aqui
+    const user = this.usersRepository.findById(user_id);
+    if (!user.admin) {
+      throw new Error("Usuário não é admin");
+    }
+    return this.usersRepository.list();
   }
 }
 
