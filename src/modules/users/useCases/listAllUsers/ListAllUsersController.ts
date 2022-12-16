@@ -3,9 +3,8 @@ import { Request, Response } from "express";
 import { ListAllUsersUseCase } from "./ListAllUsersUseCase";
 
 class ListAllUsersController {
-  constructor(private listAllUsersUseCase: ListAllUsersUseCase) {
-    console.log("");
-  }
+  // eslint-disable-next-line prettier/prettier
+  constructor(private listAllUsersUseCase: ListAllUsersUseCase) { }
 
   handle(request: Request, response: Response): Response {
     // Complete aqui
